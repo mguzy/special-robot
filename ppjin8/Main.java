@@ -18,9 +18,8 @@ public class Main{
 		
 		//przykładowe użycie zad4
 		KulaW k1 = new KulaW(kw1);
-		KulaW k2 = new Kula(w1);
+		KulaW k2 = new KulaW(w1);
 		
 		k1.show();
-		k2.show();
-	}
+		k2.show();}
 }
