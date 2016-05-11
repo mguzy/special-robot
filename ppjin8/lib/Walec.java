@@ -29,6 +29,6 @@ public class Walec{
 		double objetosc = polePodstawy*wysokosc;
 			
 		System.out.println("Pole podstawy: "+polePodstawy);
-		System.out.println("Objetosc: "+objetosc);
+		System.out.println("Objetosc: "+objetosc+"\n");
 	}
 }

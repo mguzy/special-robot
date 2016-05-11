@@ -20,7 +20,7 @@ public class Kwadrat{
 		double objetosc = pole*bok;
 			
 		System.out.println("Pole: "+pole);
-		System.out.println("Objetosc: "+objetosc);
+		System.out.println("Objetosc: "+objetosc+"\n");
 	}
 	
 	public Walec przygotujWalec(){
