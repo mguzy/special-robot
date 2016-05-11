@@ -4,24 +4,26 @@ import java.util.Random;
 public class Zadanie1{
 	
 	public static void main(String[] args){
-		char[][] t = getRandomCharMatrix(3,3);
-		debug(t);
+		char[][] t = getRandomCharMatrix(5);
 		System.out.println(countAla(t));
 	}
 	
-	private static char[][] getRandomCharMatrix(int height, int width){
+	private static char[][] getRandomCharMatrix(int size){
 		
-		if(height<1 || width<1)
+		if(size<1)
 			return null;
-		char[][] matrix = new char[height][width];
 		
-		for(int i=0; i<height; i++)
-			for(int j=0; j<width; j++)
-				matrix[i][j]=randomLetter();
+		char[][] matrix = new char[size][size];
+		
+		for(int i=0; i<size; i++)
+			for(int j=0; j<size; j++)
+				matrix[i][j]=randomSmallLetter();
 			
 		return matrix;
 	}
 	
+	//metoda zlicza wystąpienia słowa "ala" w kwadratowej(!) tablicy
+	//założyłem, że ciąg znaków "alala" to dwa słowa "ala"
 	public static int countAla(char[][] tab){
        
         int counter=0;
@@ -49,16 +51,7 @@ public class Zadanie1{
         return counter;
     }
 	
-	private static void debug(char[][] matrix){
-		
-		for(int i=0; i<matrix.length; i++){
-			for(int j=0; j<matrix[0].length; j++)
-				System.out.print(matrix[i][j]+" ");
-			System.out.println();
-		}
-	}
-	
-	private static char randomLetter(){
+	private static char randomSmallLetter(){
 		
 		Random generator = new Random();
 		
